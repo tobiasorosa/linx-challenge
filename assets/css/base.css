@@ -9,6 +9,11 @@ body {
     color: #888888;
 }
 
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 #header {
     position: relative;
     text-align: center;
@@ -52,6 +57,9 @@ body {
 }
 
 .navbar_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 160px;
     height: 40px;
     box-shadow: 0px 1px 6px #00000029;
@@ -60,6 +68,7 @@ body {
     font-size: 14px;
     color: #888888;
     background: #FFFFFF 0% 0% no-repeat padding-box;
+    text-decoration: none;
 }
 
 .navbar_button:hover {
@@ -68,9 +77,22 @@ body {
 
 #newsletter {
     display: flex;
-    max-width: 85%;
+    max-width: 1000px;
     margin: auto;
     flex-wrap: wrap;
+    font-size: 12px;
+}
+
+#newsletter-container {
+    width: 60%;
+}
+
+#form-container {
+    width: 340px;
+}
+
+.container_title {
+    font-size: 20px;
 }
 
 .form_control {
@@ -84,6 +106,34 @@ body {
     width: 340px;
     height: 40px;
     color: #888888
+}
+
+.section_title {
+    text-align: center;
+}
+
+.lined_title {
+    width: 770px;
+    position: relative;
+    margin: auto;
+}
+
+.lined_title::after, .lined_title::before {
+    content: '';
+    position: absolute;
+    margin: auto;
+    height: 1px;
+    background-color:#707070;
+    width: 45%;
+    top: 45%;
+}
+
+.lined_title::after {
+    left: -15%;
+}
+
+.lined_title::before {
+    right: -15%;
 }
 
 @media screen and (max-width: 800px) {
@@ -111,14 +161,12 @@ body {
         margin: 1.25%;
     }
 
-    .navbar_button {
-        width: 160px;
-        padding: 10px;
-    }
-
-
-
     .button {
         width: 100%;
+    }
+
+    #newsletter {
+        max-width: 800px;
+        margin: 0 20px;
     }
 }
