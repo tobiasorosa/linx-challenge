@@ -1,0 +1,42 @@
+.btn{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    width: 40%;
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border: 1px solid #707070;
+    color: #707070;
+    margin:0 0.3em 0.3em 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:300;
+    text-align:center;
+    transition: all 0.2s;
+    font-size: 16px;
+    height: 40px;
+}
+
+.form_button {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    width: 100%;
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border: 1px solid #707070;
+    color: #707070;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.btn:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+}
+
+    @media all and (max-width:30em){
+    .btn{
+    display:block;
+    margin:0.4em auto;
+    }
+}
