@@ -1,9 +1,22 @@
-document.addEventListener('DOMContentLoaded', init)
+window.addEventListener('resize', resize);
 
-function init() {
-    let query = window.matchMedia('(max-width: 1000px)');
+function resize() {
 
-    if (query.matches) {
-        document.getElementById('collapse').setAttribute("href","#newsletter-container");
+    if (matchMedia('only screen and (max-width: 1000px)').matches) {
+        document.querySelectorAll('.collapse').forEach(button => {
+            button.addEventListener('click', () => {
+                const collapseContent = button.nextElementSibling;
+    
+                button.classList.toggle('collapse-active');
+    
+                if (button.classList.contains('collapse-active')) {
+                    collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px';
+                } else {
+                    collapseContent.style.maxHeight = 0;
+                }
+            })
+        })
     }
 }
+
+

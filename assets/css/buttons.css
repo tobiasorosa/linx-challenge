@@ -16,6 +16,10 @@
     height: 40px;
 }
 
+button {
+    font-family: "heebo", sans-serif;
+}
+
 .form_button {
     background: #FFFFFF 0% 0% no-repeat padding-box;
     width: 100%;
