@@ -13,8 +13,8 @@ fetch("http://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1")
 .then(function(resp) {
     return resp.json();
 })
-
 .then(function(data) {
+    var jsonNextPage = data.nextPage;
     var products = data.products;
     console.log(products);
     console.log(data);
@@ -35,13 +35,10 @@ fetch("http://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1")
         </div>
         `
         document.getElementById('product-container').appendChild(card);
-        console.log(i);
         }
-        console.log(i);
         document.getElementById('button-more').addEventListener('click', () => {
             if(i == 4) {
                 for(i; i < 8; i++){
-                    console.log(i);
                     let card = document.createElement('div');
                     card.className = "product_card";
                     card.innerHTML = `
@@ -53,21 +50,20 @@ fetch("http://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1")
                         <h4>Por: ${formatter.format(products[i].price)}</h4>
                         <p>ou ${products[i].installments.count}x de ${formatter.format(products[i].installments.value)}</p>
                         <button type="button" class="btn_compra">Comprar</button>
-                        <h7>${i}</h7>
                         </div>
                     `
                     document.getElementById('product-container').appendChild(card);
                     }
                     i = 0;
             } else if(i == 0) {
-                console.log(data.nextPage);
-                fetch(data.nextPage)
+                
+                fetch('http://' + jsonNextPage)
                 .then(function(resp) {
                         return resp.json();
                     })
                 .then(function(data) {
+                    jsonNextPage = data.nextPage;
                     products = data.products;
-                })
                 for(i; i < 4; i++){
                     let card = document.createElement('div');
                     card.className = "product_card";
@@ -83,10 +79,10 @@ fetch("http://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1")
                     </div>
                     `
                     document.getElementById('product-container').appendChild(card);
-                    console.log(i);
                 }
-            }
-        })
+            })
+        }
+    })
 
     } else {
         for(let i = 0; i < 8; i++){
@@ -105,16 +101,16 @@ fetch("http://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1")
             `
             document.getElementById('product-container').appendChild(card);
         }
+        
         document.getElementById('button-more').addEventListener('click', () => {
-            fetch(data.nextPage)
+            fetch('http://' + jsonNextPage)
             .then(function(resp) {
                 return resp.json();
             })
             .then(function(data) {
-            products = data.products;
-        })
-            
-            for(let i = 0; i < 8; i++){
+                jsonNextPage = data.nextPage;
+                products = data.products;            
+                for(let i = 0; i < 8; i++){
                 let card = document.createElement('div');
                 card.className = "product_card";
                 card.innerHTML = `
@@ -129,8 +125,8 @@ fetch("http://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1")
                 </div>
                 `
                 document.getElementById('product-container').appendChild(card);
-            }
-        
-        }
+                }
+            })
+        })
     }
-});
+})
