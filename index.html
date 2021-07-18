@@ -38,11 +38,11 @@
                 </div>
             </div>
             <div id="form-container">
-                <form action="" id="newsletter-form">
+                <form method="POST" action="" class="contact_form"id="newsletter-form">
                     <p>Seu nome:</p>
-                    <input class="form_control" type="text" name="name" required>
+                    <input class="form_control" type="text" name="name" class="name_input" required>
                     <p>E-mail</p>
-                    <input class="form_control" type="email" name="email" required>
+                    <input class="form_control" type="email" name="email" class="email_input" required>
                     <p>CPF:</p>
                     <input class="form_control" type="text" name="cpf" id="cpf" pattern="\d{3}.?\d{3}.?\d{3}-?(\d{2})" required>
                     <div class="form_radio">
@@ -81,5 +81,7 @@
 
     <script src="assets/js/index.js"></script>
     <script src="assets/js/products.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
 </body>
 </html>
