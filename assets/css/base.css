@@ -4,6 +4,7 @@
 @import "buttons.css";
 @import "cards.css";
 @import "share.css";
+@import "footer.css";
 
 :root {
     --main-color: #707070;
@@ -39,6 +40,7 @@ main {
 .section_title {
     display: table;
     white-space: nowrap;
+    font-size: 18px;
 }
 
 .section_title:before, .section_title:after {

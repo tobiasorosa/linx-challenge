@@ -17,6 +17,7 @@
     text-align: left;
     max-width: 200px;
     flex-direction: column;
+    margin: 10px;
 }
 
 .product_card img {

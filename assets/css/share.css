@@ -1,0 +1,46 @@
+.section_desc{
+    font-size: 14px;
+    text-align: center;
+    margin: 3em auto;
+    max-width: 90%;
+}
+
+.share_section p {
+    font-size: 12px;
+    text-align: left;
+}
+
+.share_form {
+    width: 100%;
+}
+
+.form_div {
+    display: block;
+    margin: auto;
+    width: 45%;
+    padding-bottom: 5%;
+}
+
+.share_controls {
+    display: flex;
+}
+
+.share_form .btn {
+    display: block;
+    margin: auto auto 5% auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .form_div {
+        width: 90%;
+        padding-bottom: 0;
+    }
+
+    .share_form .btn {
+        margin: 5% auto 10% auto;
+    }
+
+    .share_controls {
+        flex-wrap: wrap;
+    }
+}

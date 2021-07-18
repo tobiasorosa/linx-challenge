@@ -1,0 +1,27 @@
+footer {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    background-color: var(--main-color);
+    display: block;
+    clip-path: polygon(0 29%, 100% 0, 100% 100%, 0% 100%);
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+.footer_content {
+    padding: 8% 0 4% 0;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 1000px) {
+    .footer_content {
+        padding: 8em 0 4em 0;
+    }
+}

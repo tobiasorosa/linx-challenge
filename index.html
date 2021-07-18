@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Linx Challenge</title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="assets/js/form.js"></script>
     <script src="https://kit.fontawesome.com/ceb7d6cafd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/base.css" />
@@ -20,9 +21,9 @@
             <div class="navbar_container">
                 <ul class="navbar_menu">
                     <li class="navbar_item"><a  class="navbar_button" href="#header">Conheça a Linx</a></li>
-                    <li class="navbar_item"><a  class="navbar_button">Ajude o algorítimo</a></li>
-                    <li class="navbar_item"><a  class="navbar_button">Seus produtos</a></li>
-                    <li class="navbar_item"><a  class="navbar_button">Compartilhe</a></li>
+                    <li class="navbar_item"><a  class="navbar_button" href="#newsletter">Ajude o algorítimo</a></li>
+                    <li class="navbar_item"><a  class="navbar_button" href="#products-section">Seus produtos</a></li>
+                    <li class="navbar_item"><a  class="navbar_button" href="#share-section">Compartilhe</a></li>
                 </ul>
             </div>
         </nav>
@@ -38,17 +39,17 @@
                 </div>
             </div>
             <div id="form-container">
-                <form method="POST" action="" class="contact_form"id="newsletter-form">
+                <form method="POST" action="" class="contact_form" id="newsletter-form">
                     <p>Seu nome:</p>
-                    <input class="form_control" type="text" name="name" class="name_input" required>
+                    <input class="form_control" type="text" name="name" class="name_input" id="name-input" required>
                     <p>E-mail</p>
-                    <input class="form_control" type="email" name="email" class="email_input" required>
+                    <input class="form_control" type="email" name="email" class="email_input" id="email-input" required>
                     <p>CPF:</p>
-                    <input class="form_control" type="text" name="cpf" id="cpf" pattern="\d{3}.?\d{3}.?\d{3}-?(\d{2})" required>
+                    <input class="form_control" type="text" name="cpf" id="cpf-input" pattern="\d{3}.?\d{3}.?\d{3}-?(\d{2})" required>
                     <div class="form_radio">
-                        <label class="radio_label"><input class="form_radio" type="radio" name="sex" value="male" checked>
+                        <label class="radio_label"><input class="form_radio" type="radio" name="sex" value="male" id="male-input" checked>
                         Masculino</label>
-                        <label class="radio_label"><input class="form_radio" type="radio" name="sex" value="female">
+                        <label class="radio_label"><input class="form_radio" type="radio" name="sex" value="female" id="female-input">
                         Feminino</label>
                     </div>
                     <input type="submit" class="form_button" value="Enviar">
@@ -56,7 +57,7 @@
             </div>
         </section>
 
-        <section class="products_section">
+        <section class="products_section" id="products-section">
             <div class="lined_title">
                 <h2 class="section_title">Sua seleção especial</h2>
             </div>
@@ -64,24 +65,33 @@
             </div>
             <button class="btn" id="button-more">Ainda mais produtos aqui!</button>
         </section>
-        <section class="share_section">
+        <section class="share_section" id="share-section">
                 <h2 class="section_title">Compartilhe a novidade</h2>
-                <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
-                <form>
-                    <p>Nome do seu amigo:</p>
-                    <input class="form_control" type="text" name="name" required>
-                    <p>E-mail:</p>
-                    <input class="form_control" type="email" name="email" required>
-                    <input type="submit" class="btn" value="Enviar agora">
+                <h3 class="section_desc">Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</h3>
+                <form class="share_form contact_form">
+                    <div class="share_controls">
+                        <div class="form_div">
+                            <p>Nome do seu amigo:</p>
+                            <input class="form_control" type="text" name="name" required>
+                        </div>
+                        <div class="form_div">
+                            <p>E-mail:</p>
+                            <input class="form_control" type="email" name="email" required>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn" value="Enviar agora" onClick=sendEmail()>
                 </form>
         </section>
     </main>
     <footer>
+        <div class="footer_content">
+            <p>Testando suas habilidades em HTML, CSS e JS.</p>
+            <p>Linx Impulse</p>
+            <p>2019</p>
+        </div>
     </footer>
-
     <script src="assets/js/index.js"></script>
     <script src="assets/js/products.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
+    <script src="assets/js/form.js"></script>
 </body>
 </html>
