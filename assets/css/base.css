@@ -60,12 +60,12 @@ main {
         text-align: left;
         margin-left: 20px;
     }
-
+    
     #header-title h2 {
         margin-bottom: 0;
         padding-bottom: 10px;
     }
-
+    
     #header p {
         padding: 0;
     }
@@ -74,7 +74,7 @@ main {
         width: 90%;
         padding: 10px 0 60px 0;
     }
-
+    
     .navbar_menu > * {
         margin: 1.25%;
     }
