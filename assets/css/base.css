@@ -2,12 +2,23 @@
 @import "header.css";
 @import "newsletter.css";
 @import "buttons.css";
+@import "cards.css";
+@import "share.css";
+
+:root {
+    --main-color: #707070;
+}
 
 *,
 *::before,
 *::after {
     margin: 0;
     box-sizing: inherit;
+}
+
+button, input, a {
+    font-family: 'Heebo', 'sans serif';
+    color: var(--main-color);
 }
 
 html {
@@ -24,6 +35,24 @@ main {
     max-width: 1000px;
     margin: 0 auto;
 }
+
+.section_title {
+    display: table;
+    white-space: nowrap;
+}
+
+.section_title:before, .section_title:after {
+    border-top: 1px solid var(--main-color);
+    content: '';
+    display: table-cell;
+    position: relative;
+    top: 0.7em;
+    width: 45%;
+}
+
+.section_title:before { right: 1.5%; }
+
+.section_title:after { left: 1.5%; }
 
 @media screen and (max-width: 800px) {
     

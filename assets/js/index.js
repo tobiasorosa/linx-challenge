@@ -1,3 +1,5 @@
+
+
 window.addEventListener('resize', resize);
 
 function resize() {
@@ -18,5 +20,3 @@ function resize() {
         })
     }
 }
-
-
