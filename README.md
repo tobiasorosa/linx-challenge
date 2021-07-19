@@ -2,11 +2,11 @@
 <p align="center">Front End Developer Challenge | Made for Linx S.A.</p>
 
 <p align="center">
- <a href="#about">About the Project</a> •
- <a href="#tech">Technologies</a> • 
+ <a href="#about-the-project">About the Project</a> •
+ <a href="#technologies">Technologies</a> • 
  <a href="#instructions">Instructions</a> • 
- <a href="#license">License</a> • 
- <a href="#actor">Actor</a>
+ <a href="#-license">License</a> • 
+ <a href="#-actor">Actor</a>
 </p>
 
 ## About the Project
