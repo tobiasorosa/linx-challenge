@@ -26,6 +26,7 @@ html {
     font-family: 'Heebo', sans-serif;
     box-sizing: border-box;
     font-weight: 600;
+    scroll-behavior: smooth;
 }
 
 body {

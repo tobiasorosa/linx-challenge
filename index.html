@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div id="form-container">
-                <form method="POST" action="" class="contact_form" id="newsletter-form">
+                <form action="" class="contact_form" id="newsletter-form">
                     <p>Seu nome:</p>
                     <input class="form_control" type="text" name="name" class="name_input" id="name-input" required>
                     <p>E-mail</p>
@@ -52,7 +52,7 @@
                         <label class="radio_label"><input class="form_radio" type="radio" name="sex" value="female" id="female-input">
                         Feminino</label>
                     </div>
-                    <input type="submit" class="form_button" value="Enviar">
+                    <input type="submit" class="form_button" value="Enviar" onclick="storeData(event)">
                 </form>
             </div>
         </section>
