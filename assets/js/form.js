@@ -47,3 +47,18 @@ function storeData(e) {
     //  Reset form inputs
     document.getElementById('newsletter-form').reset();
 }
+
+function validation() {
+    var form = document.getElementById('newsletter-form');
+    var email = document.getElementById('email-input').value;
+    var emailInput = document.getElementById('email-input');
+    var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if(email.match(pattern)) {
+        emailInput.classList.add('valid');
+        emailInput.classList.remove('invalid');
+    }   else {
+        emailInput.classList.remove('valid');
+        emailInput.classList.add('invalid');
+    }
+}

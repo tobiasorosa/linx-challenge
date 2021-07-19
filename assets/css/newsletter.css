@@ -63,6 +63,10 @@ input[type="radio"] {
     white-space: nowrap;
 }
 
+.invalid {
+    background-color: rgb(214, 166, 166);
+}
+
 @media screen and (max-width: 1000px) {
     .newsletter-container {
         width: 100%;
