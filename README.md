@@ -48,8 +48,9 @@ npm install http-server -g
 http-server
 ```
 
-###Go to your browser and type
-**☞ localhost:8080**
+**Go to your browser and type**
+
+*☞ localhost:8080*
 
 ## Netlify
 
